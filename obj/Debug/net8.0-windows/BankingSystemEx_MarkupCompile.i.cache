@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
 C:\Users\louag\source\repos\BankingSystemEx\BankingSystemEx\App.xaml
-11407045341
+21569248046
 
-10-869041132
+111534557569
 1981124507420
-MainWindow.xaml;
+BankAccountWindow.xaml;MainWindow.xaml;
 
-False
+True
 

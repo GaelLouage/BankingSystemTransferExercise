@@ -1,0 +1,33 @@
+﻿<Window x:Class="BankingSystemEx.BankAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankingSystemEx"
+        mc:Ignorable="d"
+        Title="BankAccountWindow" Height="450" Width="400">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+   
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBlock x:Name="txtBankAccountDetails" Grid.ColumnSpan="4" Grid.Row="0"/>
+
+        <GroupBox Header="Options" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <StackPanel>
+                <RadioButton x:Name="rdbWithdraw" Content="Withdraw" Margin="10"/>
+                <RadioButton x:Name="rdbDeposit" Content="Deposit" Margin="10"/>
+                <TextBox x:Name="txtAmount" Margin="10"/>
+                <Button x:Name="btnSubmit" Content="Submit" Click="btnSubmit_Click" Margin="10"/>
+            </StackPanel>
+        </GroupBox>
+        <Button x:Name="Back" Content="Back" Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3" Margin="30" Click="Back_Click"/>
+    </Grid>
+</Window>

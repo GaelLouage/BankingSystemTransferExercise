@@ -24,11 +24,13 @@ namespace BankingSystemEx
         public MainWindow(IBankRepository bankRepository)
         {
             _bankRepository = bankRepository;
+     
         }
 
         public MainWindow() : this(new BankRepository())
         {
             InitializeComponent();
+            UpdateUi();
         }
 
         private void Grid_Loaded(object sender, RoutedEventArgs e)
@@ -43,7 +45,10 @@ namespace BankingSystemEx
             var selectedAccount = lbAccounts.SelectedItem;
             if(selectedAccount is BankAccount account)
             {
-                MessageBox.Show(account.ToString());
+                var bankAcc = _bankRepository.GetAccount(account.AccountNumber);
+                var bankAccountDetailWindow = new BankAccountWindow(bankAcc);
+                bankAccountDetailWindow.Show();
+                this.Close();
             }
         }
 

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace BankingSystemEx.Helpers
 {
@@ -38,6 +39,25 @@ namespace BankingSystemEx.Helpers
             if (!string.IsNullOrEmpty(result))
             {
                 MessageBox.Show(result);
+                return;
+            }
+        }
+
+        public static void WidrawOrDepositValidation(RadioButton rdbWithdraw, RadioButton rdbDeposit, TextBox txtAmount, ref decimal amount)
+        {
+            if (rdbWithdraw.IsChecked is false && rdbDeposit.IsChecked is false)
+            {
+                MessageBox.Show("Please select witdraw or deposit!");
+                return;
+            }
+            if (string.IsNullOrWhiteSpace(txtAmount.Text))
+            {
+                MessageBox.Show("Amount cannot be empty!");
+                return;
+            }
+            if (decimal.TryParse(txtAmount.Text, out amount) is false)
+            {
+                MessageBox.Show("Amount should be numerical.");
                 return;
             }
         }

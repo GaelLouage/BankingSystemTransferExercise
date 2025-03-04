@@ -18,3 +18,6 @@ C:\Users\louag\source\repos\BankingSystemEx\BankingSystemEx\obj\Debug\net8.0-win
 C:\Users\louag\source\repos\BankingSystemEx\BankingSystemEx\obj\Debug\net8.0-windows\BankingSystemEx.pdb
 C:\Users\louag\source\repos\BankingSystemEx\BankingSystemEx\obj\Debug\net8.0-windows\BankingSystemEx.genruntimeconfig.cache
 C:\Users\louag\source\repos\BankingSystemEx\BankingSystemEx\obj\Debug\net8.0-windows\ref\BankingSystemEx.dll
+C:\Users\louag\source\repos\BankingSystemEx\BankingSystemEx\obj\Debug\net8.0-windows\BankingSystemEx.sourcelink.json
+C:\Users\louag\source\repos\BankingSystemEx\BankingSystemEx\obj\Debug\net8.0-windows\BankAccountWindow.g.cs
+C:\Users\louag\source\repos\BankingSystemEx\BankingSystemEx\obj\Debug\net8.0-windows\BankAccountWindow.baml

@@ -16,16 +16,18 @@ namespace BankingSystemEx.Models
         {
             Balance += amount;
         }
-        public void Withdraw(decimal amount)
+        public string Withdraw(decimal amount)
         {
-            if (Balance > 0)
+            if (Balance > amount)
             {
                 Balance -= amount;
+                return "";
             }
+            return "Unsifficient Funds!";
         }
         public override string ToString()
         {
-            return $"Account: {AccountNumber}, Owner: {Owner}, Balance: {Balance:C}";
+            return $"Account: {AccountNumber} \n Owner: {Owner} \n Balance: {Balance:C}";
         }
     }
 }
